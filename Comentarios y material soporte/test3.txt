@@ -1,0 +1,8 @@
+En este test se leen las 100 muestras a 1 ms (ciclo) por muestra, de esta manera en 100ms se toman todas las mediciones.
+Estas mediciones se guardan en un array que se imprime al final.
+Debido a esto, el resultado de las muestras es la posición / resistencia inicial del potenciómetro.
+
+Media3	2049,37
+Desvío Estándar3	84,23831694
+
+Este código es NO bloqueante, a diferencia de los primeros 2.

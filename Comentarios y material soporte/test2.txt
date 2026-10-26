@@ -1,0 +1,17 @@
+Se observa que desde la primera muestra los valores se encuentran más próximos a la media calculada sobre todas las muestras.
+El desvío estándar resulta considerablemente más baja que en el TEST_1, aproximadamente 10 veces menor.
+
+
+Media	2072,51
+Desvío Estándar	13,23257001
+
+
+
+ver app.c Línea 157:
+
+	averaged = averaged / AVERAGER_SIZE;
+	LOGGER_LOG("%lu\n", averaged);
+
+Promedia cierta cantidad de muestras (en este caso son 16 = AVERGAGER_SIZE) e imprime el resultado.
+El ruido aleatorio se cancela al promediar, y se conserva el valor real.
+El costo de esto es 16 conversiones por cada LOGGER_LOG, por lo tanto tiene ceirta demora.

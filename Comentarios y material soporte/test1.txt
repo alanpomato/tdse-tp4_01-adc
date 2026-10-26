@@ -1,0 +1,7 @@
+Se verifica que al principio de la toma de muestras los valores son más bajos que la media calculada sobre las 100 muestras.
+Se estima que esto se debe a un transitorio de medición.
+El desvío estándar resulta alta debido a este transitorio.
+
+Media	2227,68
+Desvío Estándar	133,6732697
+

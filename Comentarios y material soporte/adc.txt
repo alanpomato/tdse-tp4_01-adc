@@ -1,0 +1,11 @@
+La configuración del ADC  es Single Channel/Continuous Conversion
+En este modo, se muestrea continuamente un solo canal y los números digitales resultantes se almacenan continuamente en la memoria. Este modo casi siempre usa DMA para aliviar la carga excesiva en la MCU.
+Este modo se utiliza normalmente para el monitoreo en tiempo real de sensores u otros dispositivos ambientales.
+
+
+
+Conclusiones de los tres test:
+
+TEST_1: Lee el valor del ADC en PA0 e imprime su resultado. No realiza cálculos. La diferencia con TEST_1 es que muestrea ADC , imprime, muestra ADC y así sucesivamente, lo que permite una lectura correcta de la posición del potenciómetro. -> Bloqueante por LOGGER.
+TEST_2: Promedia en cantidad de muestras AVERAGER_SIZE, lo que mejora la lectura por ruido (transitorios o en toda la medición). -> Reduce ruido promediando 16 muestras. Bloqueante. 16 conversiones por LOGGER.
+TEST_3: El resultado de las muestras es la posición / resistencia inicial del potenciómetro ya que toma las 100 muestras en 100ms y luego imprime en consola. -> Código  NO bloqueante.
